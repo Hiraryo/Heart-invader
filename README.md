@@ -15,4 +15,5 @@
 |private,public,protected変数|先頭```_```(アンダースコア)を付けた **ローワーキャメル** |```_heartInvader```|
 |定数|全部大文字、単語間に```_```(アンダースコア)を付けた **アッパースネーク** |```HEART_INVADER```|
 
-では皆様、よろしくお願いします(笑)
+## メイン部分のクラス図
+![HeartInvader](https://user-images.githubusercontent.com/60394438/109635908-4483e880-7b8e-11eb-9701-1ef3adfd547f.png)
