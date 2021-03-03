@@ -16,4 +16,5 @@
 |定数|全部大文字、単語間に```_```(アンダースコア)を付けた **アッパースネーク** |```HEART_INVADER```|
 
 ## メイン部分のクラス図
-![HeartInvader](https://user-images.githubusercontent.com/60394438/109635908-4483e880-7b8e-11eb-9701-1ef3adfd547f.png)
+![HeartInvader](https://user-images.githubusercontent.com/60394438/109732691-fcea7480-7c00-11eb-82b6-6d35604e4285.png)
+
