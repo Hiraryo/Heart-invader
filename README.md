@@ -18,7 +18,7 @@
 # α版の仕様
 ## メイン部分のクラス図
 ### エネミー
-![HeartInvader](https://user-images.githubusercontent.com/60394438/110459605-85d94280-8110-11eb-944a-4541c667ee66.png)
+![HeartInvader](https://user-images.githubusercontent.com/60394438/110509712-c0110700-8145-11eb-95a2-ce9f5ab8f03a.png)
 
 ## メイン部分の抽出
 ## UI
