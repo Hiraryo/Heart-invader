@@ -17,7 +17,7 @@ namespace Enemy
             _me = gameObject.GetComponent<NavMeshAgent>();
         }
         private void Update()
-        {       
+        {
             Move(_me,_heroine);
         }
     }

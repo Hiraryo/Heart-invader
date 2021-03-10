@@ -14,10 +14,6 @@ namespace Enemy
                 my.destination = target.transform.position;
             }
         }
-        virtual protected void Attack()
-        {
-
-        }
         virtual protected void Damage()
         {
 

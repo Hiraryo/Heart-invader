@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6236026438481301395}
   - component: {fileID: 6236026438481301392}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 6236026439441292098}
   - component: {fileID: 6236026439441292099}
   - component: {fileID: 6236026439441292096}
+  - component: {fileID: 4822134923895343052}
   - component: {fileID: 6236026439441292097}
   m_Layer: 0
   m_Name: Enemy 1
@@ -207,7 +208,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -215,6 +216,22 @@ NavMeshAgent:
   m_BaseOffset: 0.99999994
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4822134923895343052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236026439441291966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb48f048630846159db9a8b64b0f812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Nose: {fileID: 6236026438481301393}
+  Bullet: {fileID: 5578890293277508556, guid: fa33e0c2b1bc7484f8c93f1e9ece7b06, type: 3}
+  _numberToGenerate: 6
+  _shotSpeed: 1000
 --- !u!114 &6236026439441292097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,9 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4624db723ae4243839e70bf2c2c2c7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefabObj: {fileID: 6236026439441291966}
-  Target: {fileID: 0}
-  NumberToGenerate: 5
 --- !u!1 &6236026439499555782
 GameObject:
   m_ObjectHideFlags: 0
