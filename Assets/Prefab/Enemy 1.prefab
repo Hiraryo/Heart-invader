@@ -124,7 +124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6236026439441291966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.94, y: 1.201, z: -18.52}
+  m_LocalPosition: {x: 3.2621017, y: 1.201, z: -5.5770016}
   m_LocalScale: {x: 0.54714, y: 0.760974, z: 0.54714}
   m_Children:
   - {fileID: 6236026438481301393}
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nose: {fileID: 6236026438481301393}
   Bullet: {fileID: 5578890293277508556, guid: fa33e0c2b1bc7484f8c93f1e9ece7b06, type: 3}
-  _numberToGenerate: 6
+  _numberToGenerate: 1
   _shotSpeed: 5000
 --- !u!114 &6236026439441292097
 MonoBehaviour:

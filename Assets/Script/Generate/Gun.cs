@@ -9,7 +9,7 @@ namespace Generate
         public GameObject Bullet;
         [SerializeField] private int _numberToGenerate;
         [SerializeField] private float _shotSpeed;
-        private void Update()
+        private void Start()
         {
             Spawn(Bullet);
         }
