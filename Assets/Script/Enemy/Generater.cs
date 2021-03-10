@@ -15,10 +15,10 @@ namespace Enemy
         {
             if (NumberToGenerate < 1)
                 return;
-            Vector3 _generatePositon = transform.localPosition;
-            _generatePositon.x = Random.Range(_positionX, -_positionX);
-            _generatePositon.z = Random.Range(_positionZ, -_positionZ);
-            transform.localPosition = _generatePositon;
+            Vector3 _generatePosition = transform.localPosition;
+            _generatePosition.x = Random.Range(_positionX, -_positionX);
+            _generatePosition.z = Random.Range(_positionZ, -_positionZ);
+            transform.localPosition = _generatePosition;
 
             Spawn();
             NumberToGenerate--;
