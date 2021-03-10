@@ -7,13 +7,13 @@ namespace Enemy
     public class Generater : MonoBehaviour
     {
         public GameObject EnemyPrefab;
-        [SerializeField] private int NumberToGenerate;
+        [SerializeField] private int _numberToGenerate;
         [SerializeField] [Range(5f, 10f)] private float _maxGenerationRadius;
         [SerializeField] [Range(1f, 5f)] private float _minGenerationRadius;
 
         private void Update()
         {
-            if (NumberToGenerate < 1)
+            if (_numberToGenerate < 1)
                 return;
             Vector3 _generatePosition = transform.localPosition;
             float _angle = Random.Range(0, 360);
@@ -22,7 +22,7 @@ namespace Enemy
             transform.localPosition = _generatePosition;
 
             Spawn();
-            NumberToGenerate--;
+            _numberToGenerate--;
         }
 
         private void Spawn()

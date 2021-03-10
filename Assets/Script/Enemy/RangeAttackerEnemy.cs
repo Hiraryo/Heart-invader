@@ -9,16 +9,16 @@ namespace Enemy
     [RequireComponent(typeof(NavMeshAgent))]
     public class RangeAttackerEnemy : EnemyBase
     {
-        private GameObject Heroine;
+        private GameObject _heroine;
         private NavMeshAgent _me;
         private void Start()
         {
-            Heroine = GameObject.Find("Heroine");
+            _heroine = GameObject.Find("Heroine");
             _me = gameObject.GetComponent<NavMeshAgent>();
         }
         private void Update()
         {       
-            Move(_me,Heroine);
+            Move(_me,_heroine);
         }
     }
 }
