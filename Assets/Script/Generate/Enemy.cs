@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Enemy
+namespace Generate
 {
-    public class Generater : MonoBehaviour
+    [RequireComponent(typeof(GenerateBase))]
+    public class Enemy : GenerateBase
     {
         public GameObject EnemyPrefab;
         [SerializeField] private int _numberToGenerate;
@@ -13,21 +14,17 @@ namespace Enemy
 
         private void Update()
         {
-            if (_numberToGenerate < 1)
-                return;
             Vector3 _generatePosition = transform.localPosition;
             float _angle = Random.Range(0, 360);
-            _generatePosition.x = Random.Range(_minGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad),_maxGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad));
+            _generatePosition.x = Random.Range(_minGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad), _maxGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad));
             _generatePosition.z = Random.Range(_minGenerationRadius * Mathf.Sin(_angle * Mathf.Deg2Rad), _maxGenerationRadius * Mathf.Sin(_angle * Mathf.Deg2Rad));
             transform.localPosition = _generatePosition;
-
-            Spawn();
-            _numberToGenerate--;
+            Spawn(EnemyPrefab);
         }
-
-        private void Spawn()
+        private void Spawn(GameObject spawnPrefab)
         {
-            GameObject enemy = Instantiate(EnemyPrefab, transform.TransformPoint(transform.localPosition), Quaternion.identity);
+            Generate(_numberToGenerate, EnemyPrefab, transform.TransformPoint(transform.localPosition), Quaternion.identity);
+            GameObject enemy = spawnPrefab;
         }
     }
 }

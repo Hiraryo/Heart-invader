@@ -231,7 +231,7 @@ MonoBehaviour:
   Nose: {fileID: 6236026438481301393}
   Bullet: {fileID: 5578890293277508556, guid: fa33e0c2b1bc7484f8c93f1e9ece7b06, type: 3}
   _numberToGenerate: 6
-  _shotSpeed: 1000
+  _shotSpeed: 5000
 --- !u!114 &6236026439441292097
 MonoBehaviour:
   m_ObjectHideFlags: 0

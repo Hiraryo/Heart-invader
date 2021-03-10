@@ -24959,14 +24959,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2037067831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57ebff32ea7040839bc7f532e33a68e, type: 3}
+  m_Script: {fileID: 11500000, guid: 961cdd83e0ed34a2aafff4a57a58c208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 6236026439441291966, guid: 0cd302976f7664f28bc11a08bbf2f455,
     type: 3}
-  NumberToGenerate: 5
-  _positionX: 5
-  _positionZ: 5
+  _numberToGenerate: 5
+  _maxGenerationRadius: 10
+  _minGenerationRadius: 5
 --- !u!4 &2037067833
 Transform:
   m_ObjectHideFlags: 0
