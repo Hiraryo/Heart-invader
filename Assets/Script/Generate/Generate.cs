@@ -4,15 +4,11 @@ using UnityEngine;
 
 namespace Generate
 {
-    public abstract class GenerateBase : MonoBehaviour
+    public abstract class GenerateBase : CoordinateCalculation
     {
-        protected void Generate(int numberToGenerate,GameObject prefab,Vector3 transform, Quaternion rotation)
+        public static GameObject Generate(GameObject prefab,Vector3 transform, Quaternion rotation)
         {
-            Spawn(prefab, transform, rotation);
-        }
-        protected GameObject Spawn(GameObject spawnObject, Vector3 spawnPoint, Quaternion rotation)
-        {
-            GameObject spawnPrefab = Instantiate(spawnObject, spawnPoint, rotation);
+            GameObject spawnPrefab = Instantiate(prefab, transform, rotation);
             return spawnPrefab;
         }
     }

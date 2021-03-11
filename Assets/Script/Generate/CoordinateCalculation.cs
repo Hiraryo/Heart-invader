@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Generate
 {
     [RequireComponent(typeof(GenerateBase))]
-    public class Enemy : GenerateBase
+    public class CoordinateCalculation : MonoBehaviour
     {
         public GameObject EnemyPrefab;
         [SerializeField] private int _numberToGenerate;
@@ -21,15 +21,8 @@ namespace Generate
             _generatePosition.x = Random.Range(_minGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad), _maxGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad));
             _generatePosition.z = Random.Range(_minGenerationRadius * Mathf.Sin(_angle * Mathf.Deg2Rad), _maxGenerationRadius * Mathf.Sin(_angle * Mathf.Deg2Rad));
             transform.localPosition = _generatePosition;
-            Spawn(EnemyPrefab);
+            GenerateBase.Generate(EnemyPrefab, transform.TransformPoint(transform.localPosition), Quaternion.identity);
             _numberToGenerate--;
-        }
-
-        private void Spawn(GameObject spawnPrefab)
-        {
-            //生成座標値に敵を_numberToGenerate体、生成
-            Generate(_numberToGenerate, EnemyPrefab, transform.TransformPoint(transform.localPosition), Quaternion.identity);
-            GameObject enemy = spawnPrefab;
         }
     }
 }
