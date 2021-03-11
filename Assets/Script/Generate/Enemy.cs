@@ -11,22 +11,24 @@ namespace Generate
         [SerializeField] private int _numberToGenerate;
         [SerializeField] [Range(5f, 10f)] private float _maxGenerationRadius;
         [SerializeField] [Range(1f, 5f)] private float _minGenerationRadius;
-        private void Start()
+        private void Update()
         {
+            //敵の生成座標を計算（生成範囲は円状、座標値はランダム）
+            if (_numberToGenerate < 1)
+                return;
+            Vector3 _generatePosition = transform.localPosition;
+            int _angle = Random.Range(0, 360);
+            _generatePosition.x = Random.Range(_minGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad), _maxGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad));
+            _generatePosition.z = Random.Range(_minGenerationRadius * Mathf.Sin(_angle * Mathf.Deg2Rad), _maxGenerationRadius * Mathf.Sin(_angle * Mathf.Deg2Rad));
+            transform.localPosition = _generatePosition;
             Spawn(EnemyPrefab);
+            _numberToGenerate--;
         }
 
         private void Spawn(GameObject spawnPrefab)
         {
-            //メモ：座標計算はEnemyModelのEnemyGenerationPositionクラスに書いてみる。
-            /*
-            Vector3 _generatePosition = EnemyPrefab.transform.localPosition;
-            int _angle = Random.Range(0, 360);
-            _generatePosition.x = Random.Range(_minGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad), _maxGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad));
-            _generatePosition.z = Random.Range(_minGenerationRadius * Mathf.Sin(_angle * Mathf.Deg2Rad), _maxGenerationRadius * Mathf.Sin(_angle * Mathf.Deg2Rad));
-            EnemyPrefab.transform.localPosition = _generatePosition;
-            */
-            Generate(_numberToGenerate, EnemyPrefab, EnemyPrefab.transform.localPosition, Quaternion.identity);
+            //生成座標値に敵を_numberToGenerate体、生成
+            Generate(_numberToGenerate, EnemyPrefab, transform.TransformPoint(transform.localPosition), Quaternion.identity);
             GameObject enemy = spawnPrefab;
         }
     }

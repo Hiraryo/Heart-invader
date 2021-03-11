@@ -2,7 +2,6 @@
 
 namespace Generate
 {
-    [RequireComponent(typeof(GenerateBase))]
     public class Gun : GenerateBase
     {
         public Transform Nose;

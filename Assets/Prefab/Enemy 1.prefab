@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 6236026439441292098}
   - component: {fileID: 6236026439441292099}
   - component: {fileID: 6236026439441292096}
-  - component: {fileID: 4822134923895343052}
   - component: {fileID: 6236026439441292097}
   m_Layer: 0
   m_Name: Enemy 1
@@ -124,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6236026439441291966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2621017, y: 1.201, z: -5.5770016}
+  m_LocalPosition: {x: -3.6805382, y: 1.201, z: -0.6472197}
   m_LocalScale: {x: 0.54714, y: 0.760974, z: 0.54714}
   m_Children:
   - {fileID: 6236026438481301393}
@@ -216,22 +215,6 @@ NavMeshAgent:
   m_BaseOffset: 0.99999994
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4822134923895343052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6236026439441291966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb48f048630846159db9a8b64b0f812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Nose: {fileID: 6236026438481301393}
-  Bullet: {fileID: 5578890293277508556, guid: fa33e0c2b1bc7484f8c93f1e9ece7b06, type: 3}
-  _numberToGenerate: 1
-  _shotSpeed: 5000
 --- !u!114 &6236026439441292097
 MonoBehaviour:
   m_ObjectHideFlags: 0
