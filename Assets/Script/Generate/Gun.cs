@@ -4,7 +4,6 @@ namespace Generate
 {
     public class Gun : GenerateBase
     {
-        /*
         public Transform Nose;
         public GameObject Bullet;
         [SerializeField] private int _numberToGenerate;
@@ -18,6 +17,5 @@ namespace Generate
             Generate(Bullet, Nose.position, Nose.rotation);
             GameObject bullet = spawnPrefab;
         }
-        */
     }
 }
