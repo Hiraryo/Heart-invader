@@ -2,7 +2,6 @@
 
 namespace Generate
 {
-    [RequireComponent(typeof(GenerateBase))]
     public class CoordinateCalculation : MonoBehaviour
     {
         public GameObject EnemyPrefab;
