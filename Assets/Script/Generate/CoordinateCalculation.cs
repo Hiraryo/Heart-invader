@@ -2,7 +2,7 @@
 
 namespace Generate
 {
-    public class CoordinateCalculation : MonoBehaviour
+    public class CoordinateCalculation : GenerateBase
     {
         public GameObject EnemyPrefab;
         [SerializeField] private int _numberToGenerate;
@@ -18,7 +18,7 @@ namespace Generate
             _generatePosition.x = Random.Range(_minGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad), _maxGenerationRadius * Mathf.Cos(_angle * Mathf.Deg2Rad));
             _generatePosition.z = Random.Range(_minGenerationRadius * Mathf.Sin(_angle * Mathf.Deg2Rad), _maxGenerationRadius * Mathf.Sin(_angle * Mathf.Deg2Rad));
             transform.localPosition = _generatePosition;
-            GenerateBase.Generate(EnemyPrefab, transform.TransformPoint(transform.localPosition), Quaternion.identity);
+            Generate(EnemyPrefab, transform.TransformPoint(transform.localPosition), Quaternion.identity);
             _numberToGenerate--;
         }
     }

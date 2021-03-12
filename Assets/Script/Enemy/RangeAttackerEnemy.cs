@@ -3,7 +3,6 @@ using UnityEngine.AI;
 
 namespace Enemy
 {
-    [RequireComponent(typeof(EnemyBase))]
     [RequireComponent(typeof(NavMeshAgent))]
     public class RangeAttackerEnemy : EnemyBase
     {

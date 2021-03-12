@@ -8,14 +8,12 @@ namespace Generate
         public GameObject Bullet;
         [SerializeField] private int _numberToGenerate;
         [SerializeField] private float _shotSpeed;
-        private void Start()
+        private void Update()
         {
-            Spawn(Bullet);
-        }
-        private void Spawn(GameObject spawnPrefab)
-        {
+            if (_numberToGenerate < 1)
+                return;
             Generate(Bullet, Nose.position, Nose.rotation);
-            GameObject bullet = spawnPrefab;
+            _numberToGenerate--;
         }
     }
 }
