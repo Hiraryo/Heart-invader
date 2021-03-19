@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// ヒロインの移動に関するクラス
+/// </summary>
 public class HeroineMover : MonoBehaviour
 {
     NavMeshAgent _navMeshAgent;
@@ -10,6 +13,15 @@ public class HeroineMover : MonoBehaviour
     private void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+    }
+
+    /// <summary>
+    /// ヒロインのゴール地点のゲッター
+    /// </summary>
+    /// <returns>ゴール地点</returns>
+    public Vector3 GetNavDestination()
+    {
+        return _navMeshAgent.destination;
     }
 
     /// <summary>
@@ -21,10 +33,7 @@ public class HeroineMover : MonoBehaviour
         _navMeshAgent?.SetDestination(destination);
     }
 
-    public Vector3 GetNavDestination()
-    {
-        return _navMeshAgent.destination;
-    }
+    
 
     /// <summary>
     /// ヒロインのナビゲーションの再生、停止セッター
