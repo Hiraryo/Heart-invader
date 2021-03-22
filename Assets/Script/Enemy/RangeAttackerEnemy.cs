@@ -31,14 +31,8 @@ namespace Enemy
         {
             if (collision.gameObject.tag == "playerGun")
             {
-                if (_hp > 0)
-                {
-                    _hp = Damage(_hp, _damage);
-                }
-                if (_hp <= 0)
-                {
-                    Destroy(gameObject);
-                }
+                if (_hp > 0)  { _hp = Damage(_hp, _damage); }
+                if (_hp <= 0) { Destroy(gameObject); }
             } 
         }
     }
