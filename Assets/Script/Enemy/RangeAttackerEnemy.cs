@@ -9,7 +9,7 @@ namespace Enemy
     [RequireComponent(typeof(NavMeshAgent))]
     public class RangeAttackerEnemy : EnemyBase
     {
-        private int _hp = 400;
+        private int _hp = 20;
         private int _damage = 20;
         private GameObject _heroine;
         private NavMeshAgent _me;
@@ -21,6 +21,7 @@ namespace Enemy
         private void Update()
         {
             Move(_me,_heroine);
+            if (_hp <= 0) { Destroy(gameObject); }
         }
         private void Attack()
         {
@@ -32,8 +33,7 @@ namespace Enemy
             if (collision.gameObject.tag == "playerGun")
             {
                 if (_hp > 0)  { _hp = Damage(_hp, _damage); }
-                if (_hp <= 0) { Destroy(gameObject); }
-            } 
+            }
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Generate
     public class Calculation : GenerateBase
     {
         public GameObject EnemyPrefab;
-        private int _numberToGenerate = 5;
+        private int _numberToGenerate = 1;
         [SerializeField] [Range(5f, 10f)] private float _maxGenerationRadius;
         [SerializeField] [Range(1f, 5f)] private float _minGenerationRadius;
         private void Start()
