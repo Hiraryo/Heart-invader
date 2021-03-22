@@ -9,8 +9,8 @@ namespace Enemy
     [RequireComponent(typeof(NavMeshAgent))]
     public class RangeAttackerEnemy : EnemyBase
     {
-        private int _hp = 400;
-        private int _damage = 20;
+        private int _hp = 25;
+        private int _damage = 1;
         private GameObject _heroine;
         private NavMeshAgent _me;
         private void Start()
