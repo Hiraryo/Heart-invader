@@ -18,7 +18,7 @@ namespace Enemy
         //敵が受けるダメージ
         public int Damage(int hp,int damage)
         {
-            return hp -= damage;
+            return hp - damage;
         }
     }
 }
