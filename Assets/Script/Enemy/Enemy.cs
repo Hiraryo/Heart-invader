@@ -7,12 +7,19 @@ namespace Enemy
     public abstract class EnemyBase : MonoBehaviour
     {
         //敵の移動
-        virtual protected void Move(NavMeshAgent my,GameObject target)
+        public static void Move(NavMeshAgent my,GameObject target)
         {
             if (target != null)
             {
                 my.destination = target.transform.position;
             }
+        }
+
+        //敵が受けるダメージ
+        public int Damage(int hp,int damage)
+        {
+            Debug.Log("当たった。HPは" + hp);
+            return hp -= damage;
         }
     }
 }

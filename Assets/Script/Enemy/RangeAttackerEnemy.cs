@@ -10,6 +10,7 @@ namespace Enemy
     public class RangeAttackerEnemy : EnemyBase
     {
         private int _hp = 400;
+        private int _damage = 20;
         private GameObject _heroine;
         private NavMeshAgent _me;
         private void Start()
@@ -26,24 +27,19 @@ namespace Enemy
             //銃撃
             //弾の生成はGunUserを使う（使えたら）
         }
-        private void Damage(int damage)
-        {
-            if(_hp > 0)
-            {
-                _hp -= damage;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-
-        }
         private void OnCollisionEnter(Collision collision)
         {
-            if(collision.gameObject.tag == "playerGun")
+            if (collision.gameObject.tag == "playerGun")
             {
-                Damage(20);
-            }
+                if (_hp > 0)
+                {
+                    _hp = Damage(_hp, _damage);
+                }
+                if (_hp <= 0)
+                {
+                    Destroy(gameObject);
+                }
+            } 
         }
     }
 }

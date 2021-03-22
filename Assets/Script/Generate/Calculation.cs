@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Generate
 {
-    public class CoordinateCalculation : GenerateBase
+    public class Calculation : GenerateBase
     {
         public GameObject EnemyPrefab;
         private int _numberToGenerate = 5;
@@ -19,10 +19,10 @@ namespace Generate
         {
             if (_numberToGenerate < 1)
                 return;
-            Calculation();
+            CoordinateCalculation();
         }
 
-        private void Calculation()
+        private void CoordinateCalculation()
         {
             //敵の生成座標を計算（生成範囲は円状、座標値はランダム）
             Vector3 _generatePosition = transform.localPosition;
