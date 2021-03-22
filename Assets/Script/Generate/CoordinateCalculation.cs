@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//ここでは敵や弾を生成する時に必要な計算を行っています。
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
