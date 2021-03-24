@@ -1,4 +1,4 @@
-﻿//生成する為に必要な座標計算は、GenerateBaseで行っています。
+﻿//敵や弾を生成する為に必要な計算は、Calculationで行っています。
 using UnityEngine;
 using UnityEngine.AI;
 
