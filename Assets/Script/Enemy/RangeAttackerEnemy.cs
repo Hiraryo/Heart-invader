@@ -13,9 +13,8 @@ namespace Enemy
         public Transform Nose;
         public GameObject Bullet;
         //[SerializeField] private int _numberToGenerate;   //生成数(弾)
-        [SerializeField] private float _shotSpeed;
         [SerializeField] private float _attackDistance;
-        private int _hp = 25, _damage = 5;
+        private int _hp = 25, _damage = 5;  //仮置きの値です。
         private float _distance, _limit, _generateTime; //弾生成に関する変数(ヒロインと自分の距離,　弾を撃つ時間, 現在の弾準備時間)
         private GameObject _heroine;
         private NavMeshAgent _me;
@@ -30,10 +29,8 @@ namespace Enemy
         {
             Move(_me,_heroine);
             _distance = cal.DistanceCalculation(_heroine,gameObject);
-            Debug.Log("距離：" + _distance);
             if (_distance < _attackDistance)
             {
-                Debug.Log("limit : " + _limit + "_generateTime : " + _generateTime);
                 _generateTime += Time.deltaTime;
                 //生成数(弾)を使う場合は、
                 //if (_numberToGenerate > 0 && _generateTime > limit)
@@ -54,9 +51,6 @@ namespace Enemy
         {
             //射撃
             GameObject bullet = Instantiate(Bullet, Nose.position, Nose.rotation);
-            bullet.transform.rotation = this.gameObject.transform.rotation;
-            transform.position += transform.forward * Time.deltaTime;
-            Debug.Log("近い！");
         }
         private void OnCollisionEnter(Collision collision)
         {
