@@ -8,18 +8,20 @@ namespace Generate
     public class Calculation : GenerateBase
     {
         public GameObject EnemyPrefab;
+        private float _generateTime,_elapsedTime; //生成時間、経過時間
         [SerializeField] private int _numberToGenerate = 5; //敵の生成数
         [SerializeField] [Range(5f, 10f)] private float _maxGenerationRadius;
         [SerializeField] [Range(1f, 5f)] private float _minGenerationRadius;
         private void Start()
         {
+            //生成時間(3〜5秒間)
+            _generateTime = Random.Range(3.0f, 5.0f);
             //_numberToGenerate = EnemyManager.Instance.numberToGenerate;
         }
         private void Update()
         {
-            if (_numberToGenerate < 1)
-                return;
-            CoordinateCalculation();
+            _elapsedTime += Time.deltaTime;
+            if (_numberToGenerate > 0 && _elapsedTime > _generateTime){ CoordinateCalculation();}
         }
 
         private void CoordinateCalculation()
@@ -32,6 +34,9 @@ namespace Generate
             transform.localPosition = _generatePosition;
             Generate(EnemyPrefab, transform.TransformPoint(transform.localPosition), Quaternion.identity);
             _numberToGenerate--;
+            //生成時間(3〜5秒間)
+            _generateTime = Random.Range(3.0f, 5.0f);
+            _elapsedTime = 0;
         }
 
         public float DistanceCalculation(GameObject heroine, GameObject my)
