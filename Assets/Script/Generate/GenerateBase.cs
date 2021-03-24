@@ -1,4 +1,4 @@
-﻿//敵や弾の生成（基底クラス）
+﻿//敵を生成（基底クラス）
 using UnityEngine;
 
 namespace Generate
