@@ -8,7 +8,7 @@ namespace Generate
     public class Calculation : GenerateBase
     {
         public GameObject EnemyPrefab;
-        private int _numberToGenerate = 5;
+        [SerializeField] private int _numberToGenerate = 5;
         [SerializeField] [Range(5f, 10f)] private float _maxGenerationRadius;
         [SerializeField] [Range(1f, 5f)] private float _minGenerationRadius;
         private void Start()
@@ -32,6 +32,17 @@ namespace Generate
             transform.localPosition = _generatePosition;
             Generate(EnemyPrefab, transform.TransformPoint(transform.localPosition), Quaternion.identity);
             _numberToGenerate--;
+        }
+
+        public float DistanceCalculation(GameObject heroine, GameObject my)
+        {
+            //自分とヒロインの間の距離が一定値に達した時に攻撃するので、条件クリア後敵が持つAttack()へ
+            //２点間距離は、ヒロイン(x1,z1) 自分(x2,z2)とし
+            // √(x2 - x1)^2 + (z2 - z1)^2で算出
+            return Mathf.Sqrt((my.transform.position.x - heroine.transform.position.x)
+                * (my.transform.position.x - heroine.transform.position.x)
+                + (my.transform.position.y - heroine.transform.position.y)
+                * (my.transform.position.y - heroine.transform.position.y));
         }
     }
 }

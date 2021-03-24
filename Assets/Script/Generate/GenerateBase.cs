@@ -8,8 +8,7 @@ namespace Generate
         private GameObject spawnPrefab;
         public GameObject Generate(GameObject prefab,Vector3 transform, Quaternion rotation)
         {
-            spawnPrefab = Instantiate(prefab, transform, rotation);
-            return spawnPrefab;
+            return Instantiate(prefab, transform, rotation);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Enemy
     public abstract class EnemyBase : MonoBehaviour
     {
         //敵の移動
-        public static void Move(NavMeshAgent my,GameObject target)
+        public void Move(NavMeshAgent my,GameObject target)
         {
             if (target != null)
             {

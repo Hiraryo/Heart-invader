@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6236026438481301390}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0.478, z: 0.535}
   m_LocalScale: {x: 0.1772, y: 0.1772, z: 0.1772}
   m_Children: []
   m_Father: {fileID: 6236026439441292100}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!33 &6236026438481301394
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -245,6 +245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4624db723ae4243839e70bf2c2c2c7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Nose: {fileID: 6236026438481301393}
+  Bullet: {fileID: 5578890293277508556, guid: fa33e0c2b1bc7484f8c93f1e9ece7b06, type: 3}
+  _shotSpeed: 10000
+  _attackDistance: 3
 --- !u!54 &535023494214362952
 Rigidbody:
   m_ObjectHideFlags: 0
