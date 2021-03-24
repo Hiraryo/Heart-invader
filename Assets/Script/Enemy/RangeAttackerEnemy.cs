@@ -12,16 +12,13 @@ namespace Enemy
     {
         public Transform Nose;
         public GameObject Bullet;
-        //[SerializeField] private int _numberToGenerate;
+        //[SerializeField] private int _numberToGenerate;   //生成数(弾)
         [SerializeField] private float _shotSpeed;
         [SerializeField] private float _attackDistance;
-        private int _hp = 25;
-        private int _damage = 5;
+        private int _hp = 25, _damage = 5;
+        private float _distance, _limit, _generateTime; //弾生成に関する変数(ヒロインと自分の距離,　弾を撃つ時間, 現在の弾準備時間)
         private GameObject _heroine;
         private NavMeshAgent _me;
-        private float _distance;
-        private float _limit;
-        private float _generateTime; //弾の生成を開始する時間
         readonly Calculation cal = new Calculation();
         private void Start()
         {
@@ -38,13 +35,13 @@ namespace Enemy
             {
                 Debug.Log("limit : " + _limit + "_generateTime : " + _generateTime);
                 _generateTime += Time.deltaTime;
-                //弾の生成数を使う場合は、
+                //生成数(弾)を使う場合は、
                 //if (_numberToGenerate > 0 && _generateTime > limit)
                 if (_generateTime > _limit)
                 {
                     Attack();
                     _generateTime = 0;
-                    //弾の生成数を決めるなら、以下の1行のコメントを解除
+                    //生成数(弾)を決めるなら、以下の1行のコメントを解除
                     //_numberToGenerate--;
                 }
 
