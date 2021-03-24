@@ -68,6 +68,18 @@
 敵：狙って、セットして、当たって、死んじゃう<br>
 弾：セットされて、飛んで、消える<br>
 
+#### 敵が生成される範囲
+![2021-03-10_11 30 02](https://user-images.githubusercontent.com/60394438/112376747-28f0a580-8d28-11eb-8b16-b9257dd8ee0e.png)
+
+
+#### 敵生成（パターン１）
+敵を生成する時間をランダムにして、不定期に生成する
+![A](https://user-images.githubusercontent.com/60394438/112376394-bed80080-8d27-11eb-90e3-0f86bf4211cf.gif)
+
+#### 敵生成（パターン２）
+ゲーム開始と同時に全ての敵を生成する
+![B](https://user-images.githubusercontent.com/60394438/112376352-b1bb1180-8d27-11eb-9a89-0c2e414f933c.gif)
+
 ### ヒロイン
 - 移動機能
 - ダメージ機能
