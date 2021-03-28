@@ -74,7 +74,7 @@
 
 #### 敵生成（パターン１）
 敵を生成するまでの待ち時間を3〜5秒間の中からランダムに決めて、１体ずつ生成する
-![A](https://user-images.githubusercontent.com/60394438/112376394-bed80080-8d27-11eb-90e3-0f86bf4211cf.gif)
+![A](https://user-images.githubusercontent.com/60394438/112746517-350b8a00-8fea-11eb-89e4-8684b1ab997e.gif)
 
 #### 敵生成（パターン２）
 ゲーム開始と同時に全ての敵を生成する
