@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -33,7 +33,7 @@ public class HeroineMover : MonoBehaviour
         _navMeshAgent?.SetDestination(destination);
     }
 
-    
+
 
     /// <summary>
     /// ヒロインのナビゲーションの再生、停止セッター
@@ -57,10 +57,10 @@ public class HeroineMover : MonoBehaviour
     /// ゴール到達処理
     /// </summary>
     /// <param name="other"></param>
-    private  void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Goal")
-        {  
+        if (other.tag == "Goal")
+        {
             // 以下ゴール到達時の処理
             _navMeshAgent.isStopped = true;
 
@@ -76,5 +76,5 @@ public class HeroineMover : MonoBehaviour
     {
         return _navMeshAgent.remainingDistance;
     }
-    
+
 }
