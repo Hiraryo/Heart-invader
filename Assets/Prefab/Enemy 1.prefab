@@ -231,7 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nose: {fileID: 6236026438481301393}
   Bullet: {fileID: 1349045257398336964}
-  _attackDistance: 7
+  _attackDistance: 2
 --- !u!54 &535023494214362952
 Rigidbody:
   m_ObjectHideFlags: 0

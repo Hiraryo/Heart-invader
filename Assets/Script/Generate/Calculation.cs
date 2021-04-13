@@ -42,8 +42,8 @@ namespace Generate
             // √(x2 - x1)^2 + (z2 - z1)^2で算出
             return Mathf.Sqrt((my.transform.position.x - heroine.transform.position.x)
                 * (my.transform.position.x - heroine.transform.position.x)
-                + (my.transform.position.y - heroine.transform.position.y)
-                * (my.transform.position.y - heroine.transform.position.y));
+                + (my.transform.position.z - heroine.transform.position.z)
+                * (my.transform.position.z - heroine.transform.position.z));
         }
     }
 }

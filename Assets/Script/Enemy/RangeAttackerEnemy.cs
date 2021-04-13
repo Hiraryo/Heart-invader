@@ -27,6 +27,7 @@ namespace Enemy
         }
         private void Update()
         {
+            Debug.Log("_distance" + _distance);
             Move(_me,_heroine);
             _distance = cal.DistanceCalculation(_heroine,gameObject);
             if (_distance < _attackDistance)
@@ -41,11 +42,9 @@ namespace Enemy
                     //生成数(弾)を決めるなら、以下の1行のコメントを解除
                     //_numberToGenerate--;
                 }
-
             }
             else {_generateTime = 0;}
             if (_hp <= 0) { Destroy(gameObject); }
-
         }
         private void Attack()
         {

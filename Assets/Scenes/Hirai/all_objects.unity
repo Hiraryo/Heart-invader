@@ -46730,7 +46730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 6236026439441291966, guid: 0cd302976f7664f28bc11a08bbf2f455,
     type: 3}
-  _numberToGenerate: 4
+  _numberToGenerate: 10
   _maxGenerationRadius: 10
   _minGenerationRadius: 5
 --- !u!4 &2037067833

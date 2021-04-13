@@ -21,7 +21,6 @@ namespace Enemy
             {
                 Destroy(gameObject);
             }
-
         }
     }
 }
