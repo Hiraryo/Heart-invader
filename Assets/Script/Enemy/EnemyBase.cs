@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 namespace Enemy
 {
-    public abstract class EnemyBase : MonoBehaviour
+    public class EnemyBase : MonoBehaviour
     {
         //敵の移動
         public void Move(NavMeshAgent my,GameObject target)
